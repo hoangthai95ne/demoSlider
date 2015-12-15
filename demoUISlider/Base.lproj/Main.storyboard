@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QJD-9i-ya3">
+                                <rect key="frame" x="18" y="253" width="284" height="31"/>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QJD-9i-ya3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FEY-fO-TNg"/>
+                            <constraint firstItem="QJD-9i-ya3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gbg-1o-lP3"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="slider" destination="QJD-9i-ya3" id="hMS-J6-NhR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" id="L31-4h-lrs">
+                    <rect key="frame" x="0.0" y="0.0" width="166" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="o1V-h7-ye8">
+                            <rect key="frame" x="-2" y="0.0" width="170" height="31"/>
+                        </slider>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="o1V-h7-ye8" secondAttribute="trailing" constant="20" id="5GO-wK-tpg"/>
+                        <constraint firstItem="o1V-h7-ye8" firstAttribute="leading" secondItem="L31-4h-lrs" secondAttribute="leading" id="Jkz-2a-8qC"/>
+                        <constraint firstAttribute="trailing" secondItem="o1V-h7-ye8" secondAttribute="trailing" id="kke-hD-aFX"/>
+                        <constraint firstItem="o1V-h7-ye8" firstAttribute="leading" secondItem="L31-4h-lrs" secondAttribute="leading" constant="20" symbolic="YES" id="tIZ-Nc-maU"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="o1V-h7-ye8"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="5GO-wK-tpg"/>
+                            <exclude reference="kke-hD-aFX"/>
+                            <exclude reference="tIZ-Nc-maU"/>
+                        </mask>
+                    </variation>
+                </stackView>
             </objects>
+            <point key="canvasLocation" x="391" y="247"/>
         </scene>
     </scenes>
 </document>
